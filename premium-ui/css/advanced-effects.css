@@ -1,0 +1,90 @@
+/* ===========================================================
+   ROMANO STUDIOS - ADVANCED CSS SNIPPETS
+   Effetti di luce, movimento e tipografia moderna.
+=========================================================== */
+
+/* 1. TESTO NEON PULSANTE
+   Perfetto per i titoli (H1). Crea un effetto 'insegna' che attira 
+   subito l'attenzione dell'utente. */
+.rs-neon-text {
+    color: #fff;
+    text-shadow: 
+        0 0 7px var(--primary-neon),
+        0 0 10px var(--primary-neon),
+        0 0 21px var(--primary-neon);
+    animation: pulsate 1.5s infinite alternate;
+}
+
+@keyframes pulsate {
+    100% {
+        text-shadow: 
+            0 0 4px var(--primary-neon),
+            0 0 11px var(--primary-neon),
+            0 0 40px var(--primary-neon);
+    }
+}
+
+/* 2. GRADIENTE ANIMATO SULLO SFONDO
+   Invece di un colore piatto, questo sfondo si muove lentamente.
+   Dà un senso di 'sito vivo' e dinamico. */
+.rs-moving-bg {
+    background: linear-gradient(-45deg, #050505, #001a14, #0a0a0a, #004d3d);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 3. EFFETTO MASK (Testo con immagine dentro)
+   Il testo non ha un colore, ma 'ritaglia' lo sfondo. 
+   È uno degli effetti più fighi per i siti di design. */
+.rs-text-mask {
+    background: url('https://images.unsplash.com/photo-1614850523296-d8c1af93d400') center;
+    background-size: cover;
+    -webkit-background-clip: text; /* Ritaglia l'immagine sulla forma delle lettere */
+    -webkit-text-fill-color: transparent; /* Rende il colore del testo trasparente */
+    font-size: 100px;
+    font-weight: 900;
+}
+
+/* 4. CUSTOM SCROLLBAR (La barra di scorrimento laterale)
+   La barra standard di Windows è brutta. Con questo codice 
+   la rendiamo sottile e colorata in stile Romano Studios. */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000; /* Colore del binario */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-neon); /* Colore della barra che scorre */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00ccaa; /* Cambia colore al passaggio */
+}
+
+/* 5. IMAGE ZOOM & BORDER GLOW
+   Applica questo alle immagini del tuo portfolio. 
+   Al passaggio del mouse l'immagine si ingrandisce e il bordo si illumina. */
+.rs-img-premium {
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.5s all ease;
+    filter: grayscale(50%); /* Leggermente grigia di base */
+}
+
+.rs-img-premium:hover {
+    filter: grayscale(0%); /* Torna a colori */
+    transform: scale(1.03); /* Si ingrandisce */
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.2);
+}
