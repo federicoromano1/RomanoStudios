@@ -1,0 +1,13 @@
+Modulo 2: Condizioni IF/ELSE / Conditionals
+ITA: La logica è simile a Python, ma ricorda sempre di usare le parentesi graffe {} per chiudere i blocchi di codice.
+ENG: The logic is similar to Python, but always remember to use curly braces {} to close code blocks.
+
+Codice Esempio:
+
+C
+int punti = 50;
+if (punti >= 50) {
+    printf("Accesso Pro concesso\n");
+} else {
+    printf("Accesso Negato\n");
+}
