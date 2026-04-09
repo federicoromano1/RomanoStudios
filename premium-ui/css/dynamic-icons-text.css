@@ -1,0 +1,101 @@
+/* ===========================================================
+   ROMANO STUDIOS - DYNAMIC ICONS & INTERACTIVE TEXT
+   Micro-animazioni per icone e tipografia.
+=========================================================== */
+
+/* 1. THE BEATING HEART (Icona Cuore Pulsante)
+   Perfetto per i "Like", le liste dei desideri o le sezioni "Made with Love".
+   Usa un'animazione di scala per simulare il battito reale. */
+.rs-heart-beat {
+    font-size: 30px;
+    color: #ff0055;
+    display: inline-block;
+    animation: heartBeat 1.2s infinite;
+}
+
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    15% { transform: scale(1.3); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.15); }
+    60% { transform: scale(1); }
+}
+
+/* 2. THE RINGING BELL (Icona Campana Notifiche)
+   Crea un'oscillazione realistica. Ottimo per attirare l'attenzione 
+   su un avviso o una novità nel sito. */
+.rs-bell-ring {
+    font-size: 25px;
+    display: inline-block;
+    transform-origin: top center;
+    animation: bellRing 2s infinite ease-in-out;
+}
+
+@keyframes bellRing {
+    0%, 100% { transform: rotate(0); }
+    10% { transform: rotate(15deg); }
+    20% { transform: rotate(-15deg); }
+    30% { transform: rotate(10deg); }
+    40% { transform: rotate(-10deg); }
+    50% { transform: rotate(5deg); }
+    60% { transform: rotate(-5deg); }
+}
+
+/* 3. PERSPECTIVE TEXT TILT (Testo in Prospettiva)
+   Al passaggio del mouse, il testo sembra inclinarsi verso l'utente.
+   Dà un effetto 3D immediato senza usare JavaScript. */
+.rs-text-3d {
+    font-size: 40px;
+    font-weight: 800;
+    color: #fff;
+    transition: 0.5s;
+    cursor: default;
+}
+
+.rs-text-3d:hover {
+    transform: perspective(500px) rotateX(25deg) rotateY(-10deg);
+    text-shadow: 
+        0 20px 30px rgba(0, 255, 204, 0.5),
+        0 10px 10px rgba(0, 255, 204, 0.2);
+}
+
+/* 4. THE GLITCH HOVER (Effetto Distorsione)
+   Quando l'utente passa sopra al testo, questo "vibra" con colori neon.
+   Tipico del design Cyberpunk 2026. */
+.rs-glitch-v2:hover {
+    animation: glitch-anim 0.2s infinite;
+}
+
+@keyframes glitch-anim {
+    0% { transform: translate(0); text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff; }
+    25% { transform: translate(-2px, 2px); }
+    50% { transform: translate(2px, -2px); text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff; }
+    75% { transform: translate(-1px, -1px); }
+    100% { transform: translate(0); }
+}
+
+/* 5. LIQUID UNDERLINE (Sottolineatura "Liquida")
+   Invece di una linea rigida, la sottolineatura sembra "scorrere" 
+   sotto la parola. Molto elegante per i menu. */
+.rs-liquid-link {
+    text-decoration: none;
+    color: var(--primary-neon);
+    position: relative;
+    padding: 0 5px;
+}
+
+.rs-liquid-link::before {
+    content: "";
+    position: absolute;
+    width: 100%; height: 2px;
+    bottom: -2px; left: 0;
+    background-color: var(--primary-neon);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.rs-liquid-link:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
