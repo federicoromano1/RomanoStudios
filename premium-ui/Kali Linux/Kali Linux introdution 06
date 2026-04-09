@@ -1,0 +1,9 @@
+Cracking Password con John the Ripper / Password Cracking
+ITA: Usato per "rompere" le password criptate (hash) e scoprire la parola in chiaro.
+ENG: Used to "break" encrypted passwords (hashes) and discover the plaintext word.
+
+Comando:
+
+Bash
+john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+rockyou.txt: Il dizionario di password più famoso al mondo (incluso in Kali).
