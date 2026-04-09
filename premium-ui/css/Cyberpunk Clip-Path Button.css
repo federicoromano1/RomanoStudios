@@ -1,0 +1,17 @@
+.rs-btn-skew {
+    padding: 15px 40px;
+    background: var(--primary-neon);
+    color: #000;
+    font-weight: 900;
+    text-transform: uppercase;
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rs-btn-skew:hover {
+    clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 10% 100%);
+    letter-spacing: 2px;
+    background: #fff;
+}
