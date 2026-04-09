@@ -1,0 +1,16 @@
+Modulo 1: Variabili e Tipi / Variables & Types
+ITA: In C devi dichiarare esattamente che tipo di dato stai usando. Non puoi cambiare idea dopo!
+ENG: In C you must declare exactly what type of data you are using. You can't change your mind later!
+
+Codice Esempio:
+
+C
+#include <stdio.h>
+
+int main() {
+    int livello = 100;
+    float versione = 1.0;
+    char iniziali[] = "RS";
+    printf("Studio: %s | Livello: %d\n", iniziali, livello);
+    return 0;
+}
