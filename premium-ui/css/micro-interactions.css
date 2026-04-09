@@ -1,0 +1,124 @@
+/* ===========================================================
+   ROMANO STUDIOS - MICRO-INTERACTIONS & UI
+   Dettagli che fanno la differenza tra un sito e un'esperienza.
+=========================================================== */
+
+/* 1. THE MAGNETIC LINK (L'anima del Menu)
+   La linea non appare e basta, ma nasce dal centro e si espande.
+   Molto elegante per le Navbar di lusso. */
+.rs-nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.rs-nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-neon);
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.rs-nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* 2. SHIMMER EFFECT (Effetto "Carta di Credito")
+   Un riflesso argentato che passa sopra l'elemento ogni 3 secondi.
+   Perfetto per i badge "SCONTO" o "PREMIUM". */
+.rs-shimmer {
+    position: relative;
+    overflow: hidden;
+    background: #1a1a1a;
+    color: white;
+}
+
+.rs-shimmer::before {
+    content: "";
+    position: absolute;
+    top: 0; left: -150%;
+    width: 50%; height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+    transform: skewX(-25deg);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    100% { left: 150%; }
+}
+
+/* 3. NEON BORDER DRAW (Il bordo che si disegna)
+   Al passaggio del mouse, il bordo del box "nasce" e fa il giro completo. */
+.rs-draw-box {
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    transition: 0.5s;
+}
+
+.rs-draw-box:hover {
+    border-color: transparent;
+}
+
+.rs-draw-box::before, .rs-draw-box::after {
+    content: '';
+    position: absolute;
+    width: 0; height: 0;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+}
+
+.rs-draw-box::before { top: 0; left: 0; }
+.rs-draw-box::after { bottom: 0; right: 0; }
+
+.rs-draw-box:hover::before {
+    width: 100%; height: 100%;
+    border-top-color: var(--primary-neon);
+    border-right-color: var(--primary-neon);
+    transition: width 0.2s ease-out, height 0.2s ease-out 0.2s;
+}
+
+.rs-draw-box:hover::after {
+    width: 100%; height: 100%;
+    border-bottom-color: var(--primary-neon);
+    border-left-color: var(--primary-neon);
+    transition: border-color 0s ease-out 0.4s, width 0.2s ease-out 0.4s, height 0.2s ease-out 0.6s;
+}
+
+/* 4. FLOATING BUBBLES (Sfondo vivo)
+   Piccole sfere neon che galleggiano lentamente nello sfondo. */
+.rs-bubble {
+    position: absolute;
+    width: 20px; height: 20px;
+    background: var(--primary-neon);
+    filter: blur(40px);
+    border-radius: 50%;
+    z-index: -1;
+    animation: float-bubbles 10s infinite ease-in-out;
+}
+
+@keyframes float-bubbles {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(100px, -100px); }
+}
+
+/* 5. THE "ERROR" SHAKE (Feedback tattile)
+   Se l'utente sbaglia qualcosa (es. nel form), aggiungi questa classe 
+   per far vibrare l'elemento in modo "aggressivo". */
+.rs-shake {
+    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10, 90% { transform: translate3d(-1px, 0, 0); }
+    20, 80% { transform: translate3d(2px, 0, 0); }
+    30, 50, 70% { transform: translate3d(-4px, 0, 0); }
+    40, 60% { transform: translate3d(4px, 0, 0); }
+}
