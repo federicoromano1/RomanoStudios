@@ -1,0 +1,15 @@
+Modulo 6: Funzioni / Functions
+ITA: Le funzioni in C devono essere dichiarate prima di essere usate. Servono a rendere il codice pulito e modulare.
+ENG: Functions in C must be declared before being used. They serve to make the code clean and modular.
+
+Codice Esempio:
+
+C
+int somma(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int risultato = somma(10, 20);
+    printf("Risultato: %d\n", risultato);
+}
