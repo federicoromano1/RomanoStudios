@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romano Studios - Master UI Pack</title>
+    <style>
+        /* --- CORE STYLE --- */
+        :root { --cyan: #00ffcc; --dark: #050505; --glass: rgba(255,255,255,0.05); }
+        body { background: var(--dark); color: white; font-family: 'Inter', sans-serif; margin: 0; overflow-x: hidden; }
+        section { padding: 100px 20px; display: flex; flex-direction: column; align-items: center; border-bottom: 1px solid #111; }
+
+        /* 1. NAVBAR GLASS */
+        .nav { position: fixed; top: 20px; width: 90%; left: 5%; display: flex; justify-content: space-between; padding: 15px 30px; 
+               background: var(--glass); backdrop-filter: blur(15px); border-radius: 50px; border: 1px solid rgba(255,255,255,0.1); z-index: 1000; }
+        
+        /* 2. HERO SECTION */
+        .hero h1 { font-size: clamp(40px, 8vw, 90px); text-align: center; font-weight: 900; letter-spacing: -4px; }
+        .hero span { color: var(--cyan); text-shadow: 0 0 20px rgba(0,255,204,0.3); }
+
+        /* 3. BENTO GRID */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1100px; width: 100%; }
+        .card { background: #111; padding: 30px; border-radius: 20px; border: 1px solid #222; transition: 0.3s; }
+        .card:hover { border-color: var(--cyan); transform: translateY(-10px); }
+
+        /* 4. PREMIUM BUTTONS */
+        .btn-glow { padding: 15px 35px; background: var(--cyan); color: #000; border: none; border-radius: 10px; 
+                    font-weight: bold; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
+        .btn-glow:hover { box-shadow: 0 0 30px var(--cyan); transform: scale(1.05); }
+
+        /* 5. PRICING TABLE */
+        .price-box { border: 2px solid var(--cyan); padding: 40px; border-radius: 30px; text-align: center; background: rgba(0,255,204,0.02); }
+        .price-tag { font-size: 50px; font-weight: 900; margin: 20px 0; }
+
+        /* 6. CONTACT FORM */
+        input, textarea { width: 100%; padding: 15px; background: #111; border: 1px solid #222; border-radius: 12px; color: #fff; margin-bottom: 15px; }
+
+        /* 7. SCROLL PROGRESS BAR */
+        #progress { position: fixed; top: 0; left: 0; height: 4px; background: var(--cyan); width: 0%; z-index: 1001; }
+
+        /* 8. FOOTER */
+        footer { padding: 50px; text-align: center; color: #444; font-size: 12px; letter-spacing: 2px; }
+    </style>
+</head>
+<body>
+
+    <div id="progress"></div>
+
+    <nav class="nav">
+        <div style="font-weight: 900;">ROMANO_STUDIOS</div>
+        <div style="display:flex; gap:20px; font-size:12px;"><span>PRODOTTI</span> <span>SERVIZI</span> <span>CONTATTI</span></div>
+    </nav>
+
+    <section class="hero">
+        <div style="color: var(--cyan); font-weight: bold; font-size: 12px;">WEB AGENCY PREMIUM</div>
+        <h1>IL TUO BRAND <br><span>DIVENTA REALTÀ</span></h1>
+        <p style="color:#666; max-width:500px; text-align:center;">Sviluppiamo soluzioni digitali d'avanguardia per chi non accetta compromessi.</p>
+        <button class="btn-glow" style="margin-top:30px;">Inizia Ora</button>
+    </section>
+
+    <section>
+        <h2 style="margin-bottom:50px">I NOSTRI ASSET</h2>
+        <div class="grid">
+            <div class="card"><h3>UI Components</h3><p>Bottoni neon, menu glass e animazioni fluide.</p></div>
+            <div class="card"><h3>Layouts Pro</h3><p>Griglie bento e tabelle prezzi ottimizzate.</p></div>
+            <div class="card"><h3>Clean Code</h3><p>Codice scritto per la massima velocità.</p></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="price-box">
+            <div style="font-size:12px; font-weight:bold">MASTER PACK</div>
+            <div class="price-tag">€13,99</div>
+            <p style="color:#888">Tutti i componenti inclusi <br> Update a vita</p>
+            <button class="btn-glow">Acquista su Stripe</button>
+        </div>
+    </section>
+
+    <section>
+        <div style="max-width:500px; width:100%">
+            <h2 style="text-align:center">CONTATTACI</h2>
+            <input type="text" placeholder="Tuo Nome">
+            <input type="email" placeholder="Tua Email">
+            <textarea placeholder="Parlaci del tuo progetto..."></textarea>
+            <button class="btn-glow" style="width:100%">Invia Messaggio</button>
+        </div>
+    </section>
+
+    <footer>© 2026 ROMANO STUDIOS • DIGITAL EXCELLENCE</footer>
+
+    <script>
+        window.onscroll = () => {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress").style.width = scrolled + "%";
+        };
+    </script>
+</body>
+</html>
