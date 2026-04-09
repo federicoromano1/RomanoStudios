@@ -1,0 +1,39 @@
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+<style>
+body { cursor: none; background: #000; height: 100vh; } /* Nasconde il mouse vero */
+
+.cursor, .cursor-follower {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none; /* Non blocca i click */
+    z-index: 10000;
+    transition: transform 0.1s ease-out;
+}
+
+.cursor {
+    width: 8px; height: 8px;
+    background: #00ffcc;
+}
+
+.cursor-follower {
+    width: 40px; height: 40px;
+    border: 2px solid rgba(0, 255, 204, 0.3);
+    transition: transform 0.2s ease-out;
+}
+</style>
+
+<script>
+const cursor = document.querySelector('.cursor');
+const follower = document.querySelector('.cursor-follower');
+
+document.addEventListener('mousemove', (e) => {
+    // Muove il puntatore neon
+    cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    // Muove il cerchio più grande con un po' di ritardo
+    setTimeout(() => {
+        follower.style.transform = `translate(${e.clientX - 16}px, ${e.clientY - 16}px)`;
+    }, 50);
+});
+</script>
