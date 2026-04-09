@@ -1,0 +1,11 @@
+Modulo 5: Puntatori (Il Cuore del C) / Pointers
+ITA: Questa è la parte più importante. Un puntatore non salva un valore, ma l'indirizzo di memoria dove si trova quel valore.
+ENG: This is the most important part. A pointer doesn't save a value, but the memory address where that value is located.
+
+Codice Esempio:
+
+C
+int valore = 10;
+int *p = &valore;
+printf("Indirizzo di memoria: %p\n", p);
+printf("Valore puntato: %d\n", *p);
