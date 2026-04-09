@@ -1,0 +1,13 @@
+.rs-text-reveal {
+    font-size: 80px;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+    transition: all 0.5s ease;
+}
+
+.rs-text-reveal:hover {
+    color: var(--primary-neon);
+    -webkit-text-stroke: 1px var(--primary-neon);
+    text-shadow: 0 0 30px var(--primary-neon);
+}
