@@ -1,0 +1,11 @@
+Modulo 6: Gestione degli Errori / Error Handling
+ITA: Un bravo programmatore prevede gli errori. Usiamo try ed except per evitare che il programma si blocchi se succede qualcosa di imprevisto.
+ENG: A good programmer anticipates errors. We use try and except to prevent the program from crashing if something unexpected happens.
+
+Codice Esempio:
+
+Python
+try:
+    numero = 10 / 0
+except ZeroDivisionError:
+    print("Errore: Non puoi dividere per zero!")
