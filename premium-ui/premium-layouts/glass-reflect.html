@@ -1,0 +1,38 @@
+<div class="reflect-card">
+    <div class="shine"></div>
+    <div class="content">
+        <span>01</span>
+        <h3>Design Esclusivo</h3>
+        <p>Creato appositamente per chi non si accontenta della mediocrità.</p>
+    </div>
+</div>
+
+<style>
+.reflect-card {
+    width: 300px; height: 400px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center; justify-content: center;
+    text-align: center; padding: 20px;
+}
+
+/* La scia di luce */
+.shine {
+    position: absolute; top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+    transform: skewX(-25deg);
+    transition: 0.7s;
+}
+
+.reflect-card:hover .shine {
+    left: 150%; /* La luce attraversa la card */
+}
+
+.content h3 { color: #00ffcc; margin: 15px 0; }
+.content span { font-size: 60px; font-weight: 900; opacity: 0.1; position: absolute; top: 10px; right: 20px; }
+</style>
