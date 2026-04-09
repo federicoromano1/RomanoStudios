@@ -1,0 +1,8 @@
+Analisi Traffico con Wireshark / Traffic Analysis
+ITA: Intercetta e legge i dati che passano sulla rete in tempo reale (password non criptate, siti visitati).
+ENG: Intercepts and reads data passing over the network in real-time (unencrypted passwords, visited sites).
+
+Comando:
+
+Bash
+wireshark
