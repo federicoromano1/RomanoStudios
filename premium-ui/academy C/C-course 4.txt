@@ -1,0 +1,9 @@
+Modulo 4: Array (Vettori) / Arrays
+ITA: Un array è una collezione di elementi dello stesso tipo. In C, gli array hanno una dimensione fissa.
+ENG: An array is a collection of elements of the same type. In C, arrays have a fixed size.
+
+Codice Esempio:
+
+C
+int codici[3] = {101, 202, 303};
+printf("Primo codice: %d\n", codici[0]);
