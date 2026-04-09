@@ -1,0 +1,111 @@
+//Navbar "Glassmorphism"
+
+<nav class="rs-navbar">
+    <div class="logo">ROMANO_STUDIOS</div>
+    <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Servizi</a></li>
+        <li><a href="#">Contatti</a></li>
+    </ul>
+</nav>
+
+<style>
+.rs-navbar {
+    position: fixed;
+    top: 20px;
+    width: 90%;
+    left: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: rgba(255, 255, 255, 0.05); /* Vetro scuro */
+    backdrop-filter: blur(15px); /* Effetto sfocatura */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    z-index: 1000;
+}
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { color: white; text-decoration: none; font-size: 14px; opacity: 0.7; transition: 0.3s; }
+.nav-links a:hover { opacity: 1; color: #00ffcc; }
+</style>
+
+//Hero Section "Impact"
+
+<section class="hero">
+    <h1>IL FUTURO DEL <span class="highlight">DIGITALE</span></h1>
+    <p>Soluzioni custom per brand che vogliono dominare il mercato.</p>
+    <button class="cta-btn">INIZIA ORA</button>
+</section>
+
+<style>
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #111 0%, #000 100%);
+}
+h1 { font-size: 4rem; letter-spacing: -2px; }
+.highlight { color: #00ffcc; text-shadow: 0 0 20px rgba(0,255,204,0.3); }
+p { opacity: 0.6; margin: 20px 0; max-width: 500px; }
+</style>
+
+//Card Progetti con Effetto Hover (Grid System)
+
+<div class="project-grid">
+    <div class="card">
+        <div class="card-content">
+            <h3>PROJECT_01</h3>
+            <p>Sviluppo Web Avanzato</p>
+            <a href="#" class="view-more">Dettagli →</a>
+        </div>
+    </div>
+    </div>
+
+<style>
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px;
+}
+.card {
+    background: #111;
+    border: 1px solid #222;
+    padding: 30px;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.card:hover {
+    border-color: #00ffcc;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,255,204,0.1);
+}
+</style>
+
+//Il Bottone "Glow"
+<button class="rs-glow-btn">ACQUISTA ORA</button>
+
+<style>
+.rs-glow-btn {
+    padding: 15px 35px;
+    background: #00ffcc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+.rs-glow-btn:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 204, 0.6);
+    transform: scale(1.05);
+}
+</style>
