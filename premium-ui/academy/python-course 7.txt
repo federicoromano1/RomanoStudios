@@ -1,0 +1,11 @@
+Modulo 7: Scripting Avanzato (Hacker Tools) / Advanced Scripting
+ITA: Python può interagire con il sistema operativo o con i siti web. Qui impariamo a usare le librerie per compiti più complessi.
+ENG: Python can interact with the operating system or websites. Here we learn to use libraries for more complex tasks.
+
+Codice Esempio:
+
+Python
+import socket
+target = "google.com"
+ip = socket.gethostbyname(target)
+print(f"L'indirizzo IP di {target} è {ip}")
