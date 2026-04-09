@@ -1,0 +1,10 @@
+Modulo 3: Cicli / Loops (For & While)
+ITA: I cicli in C sono estremamente veloci. Sono usati per scansionare la memoria o ripetere operazioni matematiche complesse.
+ENG: Loops in C are extremely fast. They are used to scan memory or repeat complex mathematical operations.
+
+Codice Esempio:
+
+C
+for (int i = 0; i < 5; i++) {
+    printf("Caricamento exploit... %d%%\n", i * 20);
+}
