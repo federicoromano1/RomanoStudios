@@ -1,0 +1,10 @@
+Modulo 2: Liste e Collezioni / Lists & Collections
+ITA: Una lista è un insieme di elementi ordinati. È fondamentale per gestire gruppi di dati (come una lista di utenti o di file).
+ENG: A list is a set of ordered items. It is essential for managing groups of data (like a list of users or files).
+
+Codice Esempio:
+
+Python
+linguaggi = ["Python", "JavaScript", "HTML"]
+print(linguaggi[0]) # Stampa Python
+linguaggi.append("CSS") # Aggiunge un elemento
