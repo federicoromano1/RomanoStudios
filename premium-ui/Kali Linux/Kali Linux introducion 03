@@ -1,0 +1,11 @@
+KALI LINUX: PRACTICAL EXAMPLES (ITA/ENG)
+1. Scansione Rete con Nmap / Network Scanning with Nmap
+ITA: Identifica quali dispositivi sono connessi e quali porte sono aperte.ENG: Identify which devices are connected and which ports are open.
+
+Comando:
+
+Bash
+nmap -A -T4 192.168.1.1
+-A: Attiva il rilevamento del sistema operativo e della versione dei servizi.
+
+-T4: Velocità di scansione rapida.
