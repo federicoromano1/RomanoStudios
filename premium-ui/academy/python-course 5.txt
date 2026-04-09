@@ -1,0 +1,11 @@
+Modulo 5: Funzioni Personalizzate / Custom Functions
+ITA: Una funzione è un blocco di codice che puoi riutilizzare ovunque nel tuo programma senza riscriverlo da zero.
+ENG: A function is a block of code that you can reuse anywhere in your program without rewriting it from scratch.
+
+Codice Esempio:
+
+Python
+def saluta(utente):
+    return f"Ciao {utente}, benvenuto in Romano Studios!"
+
+print(saluta("Federico"))
