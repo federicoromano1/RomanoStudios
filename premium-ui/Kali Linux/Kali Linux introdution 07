@@ -1,0 +1,9 @@
+Wi-Fi Hacking con Aircrack-ng / Wi-Fi Hacking
+ITA: La suite standard per testare la sicurezza delle reti Wi-Fi. Qui attiviamo la modalità "monitor".
+ENG: The standard suite for testing Wi-Fi network security. Here we enable "monitor" mode.
+
+Comando:
+
+Bash
+airmon-ng start wlan0
+airodump-ng wlan0mon
