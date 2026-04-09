@@ -1,0 +1,14 @@
+Introduzione / Introduction
+ITA: Python è il linguaggio più potente e semplice al mondo per l'automazione, l'intelligenza artificiale e il cyber-scripting. In questo corso imparerai dalle basi fino alla creazione di piccoli script professionali.
+ENG: Python is the world's most powerful and simplest language for automation, AI, and cyber-scripting. In this course, you will learn from the basics to creating professional scripts.
+Modulo 1: Variabili e Dati / Variables & Data Types
+ITA: Le variabili sono "scatole" dove salviamo informazioni. Python riconosce automaticamente se stai usando un testo (stringa) o un numero (intero/decimale).
+ENG: Variables are "boxes" where we save information. Python automatically recognizes if you are using text (string) or a number (integer/float).
+
+Codice Esempio:
+
+Python
+nome = "Romano Studios"
+prezzo = 19.99
+is_attivo = True
+print(nome)
