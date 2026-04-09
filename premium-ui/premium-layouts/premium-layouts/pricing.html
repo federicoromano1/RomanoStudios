@@ -1,0 +1,38 @@
+<div class="pricing-container">
+    <div class="price-card">
+        <h4>Base</h4>
+        <div class="price">€29</div>
+        <ul><li>5 Bottoni Custom</li><li>Supporto Email</li></ul>
+        <button class="price-btn">Scegli</button>
+    </div>
+    <div class="price-card featured">
+        <div class="badge">PIÙ SCELTO</div>
+        <h4>Pro Pack</h4>
+        <div class="price">€99</div>
+        <ul><li>Tutti i Componenti</li><li>Update a Vita</li><li>Priority Chat</li></ul>
+        <button class="price-btn">Scegli Pro</button>
+    </div>
+</div>
+
+<style>
+.pricing-container { display: flex; gap: 30px; justify-content: center; padding: 50px; }
+.price-card {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid #222;
+    padding: 40px;
+    border-radius: 30px;
+    width: 280px;
+    text-align: center;
+    transition: 0.3s;
+}
+.featured { 
+    border: 2px solid #00ffcc; 
+    transform: scale(1.1); 
+    box-shadow: 0 0 40px rgba(0,255,204,0.1);
+}
+.badge { background: #00ffcc; color: #000; font-size: 10px; font-weight: 800; padding: 5px 10px; border-radius: 10px; display: inline-block; margin-bottom: 15px; }
+.price { font-size: 40px; font-weight: 800; margin: 20px 0; }
+.price-btn { width: 100%; padding: 12px; border-radius: 15px; border: none; background: #fff; font-weight: bold; cursor: pointer; }
+.featured .price-btn { background: #00ffcc; }
+</style>
