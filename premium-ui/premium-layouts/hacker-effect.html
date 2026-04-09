@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romano Studios - Hacker Effect</title>
+    <style>
+        /* --- STILE HACKER (CSS) --- */
+        body {
+            background-color: #000; /* Nero profondo */
+            color: #00ffcc; /* Ciano Neon Romano Studios */
+            font-family: 'Courier New', Courier, monospace; /* Font monospaziato obbligatorio */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .hacker-text {
+            font-size: 60px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            cursor: pointer;
+            position: relative;
+            /* Leggero bagliore neon */
+            text-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+        }
+
+        /* Linea sotto che pulsa lentamente */
+        .hacker-text::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #00ffcc;
+            box-shadow: 0 0 10px #00ffcc;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.2; }
+            50% { opacity: 1; }
+            100% { opacity: 0.2; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="hacker-text" data-value="ROMANO_STUDIOS">ROMANO_STUDIOS</h1>
+
+    <script>
+        /* --- LOGICA DECODIFICA (JavaScript) --- */
+        
+        // Lettere e simboli usati per l'effetto scrambling
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*+-/<>[]{}";
+        let interval = null;
+
+        const targetHTML = document.querySelector(".hacker-text");
+
+        // Funzione che fa partire l'effetto
+        function startScramble() {
+            let iteration = 0;
+            clearInterval(interval); // Resetta eventuali intervalli precedenti
+
+            interval = setInterval(() => {
+                targetHTML.innerText = targetHTML.innerText
+                    .split("") // Divide il testo in lettere
+                    .map((letter, index) => {
+                        // Se l'iterazione è andata oltre l'indice della lettera, mostra la lettera vera
+                        if(index < iteration) {
+                            return targetHTML.dataset.value[index];
+                        }
+                        // Altrimenti mostra un carattere casuale dalla stringa 'letters'
+                        return letters[Math.floor(Math.random() * 52)]
+                    })
+                    .join(""); // Riunisce le lettere in una parola
+
+                // Ferma l'animazione quando tutte le lettere sono state rivelate
+                if(iteration >= targetHTML.dataset.value.length){ 
+                    clearInterval(interval);
+                }
+                
+                // Velocità di rivelazione: aumenta di 1/3 ad ogni ciclo
+                iteration += 1 / 3; 
+            }, 30); // Velocità dell'animazione (30ms)
+        }
+
+        // Fai partire l'effetto al passaggio del mouse
+        targetHTML.addEventListener("mouseover", startScramble);
+        
+        // Fai partire l'effetto una volta all'inizio (opzionale)
+        window.onload = startScramble;
+
+    </script>
+</body>
+</html>
