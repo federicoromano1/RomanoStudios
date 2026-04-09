@@ -1,0 +1,15 @@
+.rs-depth-card {
+    background: #0a0a0a;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 
+        20px 20px 60px #040404,
+        -20px -20px 60px #101010;
+    transition: 0.4s;
+}
+
+.rs-depth-card:hover {
+    box-shadow: 
+        inset 5px 5px 15px #040404,
+        inset -5px -5px 15px #101010;
+}
