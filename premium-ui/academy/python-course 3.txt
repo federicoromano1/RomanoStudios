@@ -1,0 +1,12 @@
+Modulo 3: Condizioni e Logica / Conditionals & Logic
+ITA: Usiamo if e else per far prendere decisioni al programma. È il cuore della logica software.
+ENG: We use if and else to make the program take decisions. It is the heart of software logic.
+
+Codice Esempio:
+
+Python
+accesso = True
+if accesso == True:
+    print("Benvenuto nell'Area Premium")
+else:
+    print("Accesso Negato")
