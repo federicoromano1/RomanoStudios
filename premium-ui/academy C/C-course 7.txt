@@ -1,0 +1,15 @@
+Modulo 7: Gestione Memoria / Memory Management
+ITA: A differenza di Python, in C devi liberare la memoria che usi manualmente con free, altrimenti il computer rallenta.
+ENG: Unlike Python, in C you must manually free the memory you use with free, otherwise the computer slows down.
+
+Codice Esempio:
+
+C
+#include <stdlib.h>
+
+int main() {
+    int *ptr = malloc(sizeof(int));
+    *ptr = 500;
+    free(ptr);
+    return 0;
+}
