@@ -1,0 +1,103 @@
+/* ===========================================================
+   ROMANO STUDIOS - ELITE UI SNIPPETS
+   Layout avanzati ed effetti di profondità.
+=========================================================== */
+
+/* 1. NEON BORDER FLOW (Il bordo che "corre")
+   Questo crea un gradiente che ruota intorno al box. 
+   È l'effetto più richiesto per le card "Premium" o "Featured". */
+.rs-border-flow {
+    position: relative;
+    padding: 2px; /* Lo spessore del bordo */
+    background: linear-gradient(90deg, var(--primary-neon), #0099ff, var(--primary-neon));
+    background-size: 200% 100%;
+    animation: border-move 3s linear infinite;
+    border-radius: 15px;
+}
+
+@keyframes border-move {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+.rs-border-flow-inner {
+    background: #080808;
+    border-radius: 13px;
+    padding: 20px;
+}
+
+/* 2. SKELETON LOADING (L'effetto "Caricamento")
+   Hai presente quando Facebook o YouTube caricano i post? 
+   Questo effetto dà un senso di velocità estrema al sito. */
+.rs-skeleton {
+    background: #1a1a1a;
+    background-image: linear-gradient(
+        90deg, 
+        rgba(255, 255, 255, 0) 0, 
+        rgba(255, 255, 255, 0.05) 20%, 
+        rgba(255, 255, 255, 0.05) 60%, 
+        rgba(255, 255, 255, 0) 100%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-wave 1.5s infinite;
+    border-radius: 4px;
+}
+
+@keyframes skeleton-wave {
+    to { background-position: -200% 0; }
+}
+
+/* 3. IMAGE LASER SCAN (Effetto Scanner)
+   Al passaggio del mouse sull'immagine, una linea laser 
+   la attraversa verticalmente. Molto Cyberpunk/Tech. */
+.rs-scan-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.rs-scan-container::after {
+    content: "";
+    position: absolute;
+    top: -100%; left: 0;
+    width: 100%; height: 5px;
+    background: var(--primary-neon);
+    box-shadow: 0 0 15px var(--primary-neon);
+    opacity: 0;
+    transition: 0s;
+}
+
+.rs-scan-container:hover::after {
+    opacity: 1;
+    animation: scan-line 2s linear infinite;
+}
+
+@keyframes scan-line {
+    0% { top: -10%; }
+    100% { top: 110%; }
+}
+
+/* 4. MASKED BLUR REVEAL (Svelamento al passaggio)
+   L'immagine è sfocata di base, ma diventa nitida 
+   in modo fluido quando l'utente ci passa sopra. */
+.rs-blur-reveal {
+    filter: blur(10px) grayscale(100%);
+    transition: filter 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.rs-blur-reveal:hover {
+    filter: blur(0px) grayscale(0%);
+}
+
+/* 5. FLOATING 3D SHADOW (Ombra dinamica)
+   Questa ombra non è nera, ma riprende il colore neon 
+   e "respira" dando tridimensionalità al bottone o alla card. */
+.rs-3d-shadow {
+    box-shadow: 0 10px 20px rgba(0, 255, 204, 0.15);
+    transition: 0.4s;
+}
+
+.rs-3d-shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 255, 204, 0.3);
+}
