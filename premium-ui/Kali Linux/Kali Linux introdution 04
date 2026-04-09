@@ -1,0 +1,8 @@
+Vulnerabilità Web con Nikto / Web Vulnerabilities with Nikto
+ITA: Scansiona un sito web alla ricerca di file pericolosi, server obsoleti e problemi di configurazione.
+ENG: Scan a website looking for dangerous files, outdated servers, and configuration issues.
+
+Comando:
+
+Bash
+nikto -h http://www.bersaglio.com
