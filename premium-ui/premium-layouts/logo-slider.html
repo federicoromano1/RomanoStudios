@@ -1,0 +1,33 @@
+<div class="rs-slider">
+    <div class="slide-track">
+        <div class="slide">LOGO_1</div>
+        <div class="slide">LOGO_2</div>
+        <div class="slide">LOGO_3</div>
+        <div class="slide">LOGO_4</div>
+        <div class="slide">LOGO_5</div>
+        <div class="slide">LOGO_1</div>
+        <div class="slide">LOGO_2</div>
+        <div class="slide">LOGO_3</div>
+        <div class="slide">LOGO_4</div>
+        <div class="slide">LOGO_5</div>
+    </div>
+</div>
+
+<style>
+.rs-slider { background: #000; height: 100px; margin: auto; overflow: hidden; position: relative; width: 100%; border-top: 1px solid #111; border-bottom: 1px solid #111; }
+.slide-track { 
+    display: flex; width: calc(250px * 10); 
+    animation: scroll 20s linear infinite; 
+}
+.slide { width: 250px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #444; font-size: 20px; }
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 5)); }
+}
+/* Sfumatura ai lati per l'effetto dissolvenza */
+.rs-slider::before, .rs-slider::after {
+    content: ""; height: 100px; position: absolute; width: 200px; z-index: 2;
+    background: linear-gradient(to right, #000 0%, rgba(0,0,0,0) 100%);
+}
+.rs-slider::after { right: 0; top: 0; transform: rotate(180deg); }
+</style>
