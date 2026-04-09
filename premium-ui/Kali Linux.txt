@@ -1,0 +1,29 @@
+KALI LINUX: THE HACKER'S TOOLBOX (ITA/ENG)
+Cos'è Kali Linux? / What is Kali Linux?
+ITA: Kali Linux è una distribuzione basata su Debian progettata specificamente per il Penetration Testing (test di intrusione) e l'Informatica Forense. Non è un sistema operativo per l'ufficio o per giocare: è un'arma digitale che contiene centinaia di strumenti pre-installati per analizzare la sicurezza delle reti.
+ENG: Kali Linux is a Debian-based distribution specifically designed for Penetration Testing and Digital Forensics. It’s not an OS for office work or gaming: it’s a digital weapon containing hundreds of pre-installed tools to analyze network security.
+
+Gli Strumenti Principali / Core Tools
+ITA: Kali include oltre 600 strumenti. I più famosi sono:
+
+Nmap: Per la scansione delle reti e la scoperta di porte aperte.
+
+Wireshark: Per analizzare il traffico dati che viaggia nell'aria o nei cavi.
+
+Metasploit: Un framework per testare vulnerabilità e lanciare exploit.
+
+John the Ripper: Per testare la robustezza delle password.
+
+Burp Suite: Per analizzare e hackerare applicazioni web.
+
+ENG: Kali includes over 600 tools. The most famous are:
+
+Nmap: For network scanning and discovering open ports.
+
+Wireshark: To analyze data traffic traveling through the air or cables.
+
+Metasploit: A framework to test vulnerabilities and launch exploits.
+
+John the Ripper: For testing password strength.
+
+Burp Suite: For analyzing and hacking web applications.
