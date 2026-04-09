@@ -1,0 +1,23 @@
+🪟 Windows: Il Gigante Versatile / The Versatile Giant
+ITA: Windows è il sistema più diffuso. Per anni è stato difficile programmarci (specialmente per il web), ma oggi con WSL2 (Windows Subsystem for Linux) puoi far girare un terminale Linux dentro Windows. È perfetto per lo sviluppo di videogiochi (C++, C#) e software aziendali.
+ENG: Windows is the most popular OS. For years, it was hard to code on (especially for web), but today with WSL2, you can run a Linux terminal inside Windows. It’s perfect for game dev (C++, C#) and corporate software.
+
+Pro: Compatibilità hardware totale, ottimo per .NET e Game Dev.
+
+Contro: Gestione dei permessi complicata, meno "nativo" per strumenti open-source.
+
+🍎 macOS: L'Eleganza Unix / The Unix Elegance
+ITA: macOS è basato su Unix, il che lo rende "fratello" di Linux. È lo standard per gli sviluppatori web e mobile. Se vuoi creare app per iPhone (iOS), devi avere un Mac per usare Xcode. È stabile, veloce e ha un terminale potente già integrato.
+ENG: macOS is based on Unix, making it a "brother" to Linux. It’s the standard for web and mobile developers. If you want to build iPhone apps (iOS), you must have a Mac to use Xcode. It’s stable, fast, and has a powerful built-in terminal.
+
+Pro: Integrazione perfetta tra hardware e software, unico per sviluppo iOS.
+
+Contro: Prezzo elevato, hardware non aggiornabile dall'utente.
+
+🐧 Linux: La Casa del Programmatore / The Programmer's Home
+ITA: Linux è il re dei server. Quasi tutto internet gira su Linux. È Open Source e gratuito. Ti dà il controllo totale: puoi modificare ogni singolo file del sistema. È l'ambiente nativo per Python, C, Docker e quasi tutti i linguaggi moderni.
+ENG: Linux is the king of servers. Almost the entire internet runs on Linux. It’s Open Source and free. It gives you total control: you can modify every single system file. It’s the native environment for Python, C, Docker, and almost all modern languages.
+
+Pro: Leggero, gratuito, sicurezza massima, controllo totale tramite Terminale.
+
+Contro: Curva di apprendimento più ripida, meno supporto per software come Adobe o Office.
