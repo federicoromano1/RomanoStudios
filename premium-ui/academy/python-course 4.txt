@@ -1,0 +1,9 @@
+Modulo 4: Cicli di Automazione / Loops (For & While)
+ITA: I cicli permettono di ripetere un'azione migliaia di volte in un secondo. È così che si creano gli strumenti di automazione.
+ENG: Loops allow you to repeat an action thousands of times in a second. This is how automation tools are created.
+
+Codice Esempio:
+
+Python
+for i in range(5):
+    print(f"Scansione sistema in corso... {i}%")
