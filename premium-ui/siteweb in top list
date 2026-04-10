@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER-VAULT | Romano Studios Elite</title>
+    <style>
+        :root { --neon: #00ffcc; --bg: #050505; --text: #e0e0e0; --card: rgba(20, 20, 20, 0.8); }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: var(--bg); color: var(--text); overflow-x: hidden; }
+
+        /* CANVAS BACKGROUND */
+        #matrix { position: fixed; top: 0; left: 0; z-index: -1; opacity: 0.15; }
+
+        /* HEADER & NAV */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 25px 10%; background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); position: fixed; width: 100%; top: 0; z-index: 100; border-bottom: 1px solid #111; }
+        .logo { color: var(--neon); font-size: 1.5rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { color: #fff; text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--neon); }
+
+        /* HERO SECTION */
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
+        .hero h1 { font-size: 4.5rem; line-height: 1; margin-bottom: 20px; background: linear-gradient(90deg, #fff, var(--neon)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 1.2rem; color: #888; max-width: 600px; margin-bottom: 30px; }
+        
+        /* TERMINAL BOX */
+        .terminal { background: #000; border: 1px solid #222; width: 100%; max-width: 700px; border-radius: 10px; padding: 20px; font-family: 'Courier New', Courier, monospace; position: relative; box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+        .terminal-header { display: flex; gap: 8px; margin-bottom: 15px; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background: #ff5f56; } .yellow { background: #ffbd2e; } .green { background: #27c93f; }
+        .typewriter { color: var(--neon); font-size: 1rem; }
+
+        /* SERVICES GRID */
+        .services { padding: 100px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .s-card { background: var(--card); border: 1px solid #222; padding: 40px; border-radius: 20px; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); position: relative; overflow: hidden; }
+        .s-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, transparent, rgba(0,255,204,0.05)); opacity: 0; transition: 0.3s; }
+        .s-card:hover { transform: translateY(-10px); border-color: var(--neon); box-shadow: 0 0 30px rgba(0,255,204,0.1); }
+        .s-card:hover::before { opacity: 1; }
+        .s-card h3 { color: var(--neon); margin-bottom: 15px; font-size: 1.5rem; }
+        .s-card p { color: #aaa; font-size: 0.95rem; line-height: 1.6; }
+
+        /* BUTTONS */
+        .btn-main { padding: 15px 40px; background: var(--neon); color: #000; text-decoration: none; border-radius: 50px; font-weight: 700; transition: 0.3s; border: none; cursor: pointer; }
+        .btn-main:hover { box-shadow: 0 0 20px var(--neon); transform: scale(1.05); }
+
+        footer { padding: 60px 10%; border-top: 1px solid #111; text-align: center; color: #444; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    <nav>
+        <div class="logo">ROMANO_STUDIOS</div>
+        <div class="nav-links">
+            <a href="#services">Servizi</a>
+            <a href="#about">Chi Siamo</a>
+            <a href="#contact">Hacker Tools</a>
+            <a href="#" class="btn-main" style="padding: 10px 20px;">Accedi</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Digital Domination.</h1>
+        <p>Sviluppiamo il futuro con Python, C++ e sistemi di sicurezza informatica avanzata.</p>
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+            </div>
+            <div id="typewriter" class="typewriter"></div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="s-card">
+            <h3>Cyber Defense</h3>
+            <p>Sistemi di protezione attiva basati su Kali Linux per blindare i tuoi dati aziendali.</p>
+        </div>
+        <div class="s-card">
+            <h3>Software Dev</h3>
+            <p>Sviluppo in Java e C++ per applicazioni enterprise ad altissime prestazioni.</p>
+        </div>
+        <div class="s-card">
+            <h3>AI Automation</h3>
+            <p>Algoritmi in Python per automatizzare processi complessi e analisi dati massiva.</p>
+        </div>
+    </section>
+
+    <footer>&copy; 2026 Romano Studios Elite Academy. Code is Law.</footer>
+
+    <script>
+        // MATRIX EFFECT
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()*&^%";
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(5, 5, 5, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#00ffcc';
+            ctx.font = fontSize + 'px monospace';
+            for (let i = 0; i < drops.length; i++) {
+                const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
+                drops[i]++;
+            }
+        }
+        setInterval(drawMatrix, 35);
+
+        // TYPEWRITER EFFECT
+        const textArr = [
+            "> Initializing Romano_OS...",
+            "> Loading security protocols...",
+            "> Accessing global databases...",
+            "> STATUS: SECURE.",
+            "> Benvenuto in Romano Studios Academy."
+        ];
+        let line = 0;
+        let charIdx = 0;
+        const display = document.getElementById('typewriter');
+
+        function type() {
+            if (line < textArr.length) {
+                if (charIdx < textArr[line].length) {
+                    display.innerHTML += textArr[line].charAt(charIdx);
+                    charIdx++;
+                    setTimeout(type, 50);
+                } else {
+                    display.innerHTML += "<br>";
+                    line++;
+                    charIdx = 0;
+                    setTimeout(type, 500);
+                }
+            }
+        }
+        type();
+    </script>
+</body>
+</html>
