@@ -1,0 +1,12 @@
+Modulo 6: Metodi e Parametri / Methods
+ITA: I metodi sono le funzioni di Java. Permettono di isolare la logica e riutilizzarla.
+ENG: Methods are Java's functions. They allow you to isolate logic and reuse it.
+
+Codice Esempio:
+
+Java
+public class Calcolatrice {
+    public static int somma(int a, int b) {
+        return a + b;
+    }
+}
