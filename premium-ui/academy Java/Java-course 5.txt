@@ -1,0 +1,21 @@
+Modulo 5: Classi e Oggetti (OOP) / Classes & Objects
+ITA: Java è il re della Programmazione a Oggetti. Ogni cosa è un oggetto con proprietà e azioni.
+ENG: Java is the king of Object-Oriented Programming. Everything is an object with properties and actions.
+
+Codice Esempio:
+
+Java
+class Software {
+    String nome;
+    void avvia() {
+        System.out.println(nome + " in esecuzione...");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Software s1 = new Software();
+        s1.nome = "RS_Antivirus";
+        s1.avvia();
+    }
+}
