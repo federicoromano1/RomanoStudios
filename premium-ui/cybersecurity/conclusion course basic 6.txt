@@ -1,0 +1,3 @@
+Conclusione / Conclusion
+ITA: Il C++ è un linguaggio vasto. Hai imparato le basi per muoverti nel mondo dello sviluppo professionale. Ora puoi passare allo studio di librerie grafiche o sistemi complessi.
+ENG: C++ is a vast language. You have learned the basics to move into the world of professional development. Now you can move on to studying graphic libraries or complex systems.
