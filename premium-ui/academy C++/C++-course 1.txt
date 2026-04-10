@@ -1,0 +1,22 @@
+Introduzione / Introduction
+ITA: Il C++ aggiunge al C la potenza degli "Oggetti" (OOP). È un linguaggio ad altissime prestazioni che ti permette di creare software complessi in modo organizzato.
+ENG: C++ adds the power of "Objects" (OOP) to C. It is a high-performance language that allows you to create complex software in an organized way.
+
+Modulo 1: Input/Output e Variabili / I/O & Variables
+ITA: In C++ usiamo iostream per comunicare con l'utente. È più semplice e moderno rispetto al vecchio printf.
+ENG: In C++ we use iostream to communicate with the user. It is simpler and more modern than the old printf.
+
+Codice Esempio:
+
+C++
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string nome;
+    int anni;
+    std::cout << "Inserisci il tuo nome: ";
+    std::cin >> nome;
+    std::cout << "Ciao " << nome << " benvenuto in Romano Studios!" << std::endl;
+    return 0;
+}
