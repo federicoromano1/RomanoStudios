@@ -1,0 +1,11 @@
+Modulo 6: Gestione Memoria (New/Delete) / Memory Management
+ITA: In C++ usiamo new e delete per gestire la memoria dinamicamente.
+ENG: In C++ we use new and delete to handle memory dynamically.
+
+Codice Esempio:
+
+C++
+int* pointer = new int;
+*pointer = 500;
+std::cout << "Valore: " << *pointer << std::endl;
+delete pointer;
