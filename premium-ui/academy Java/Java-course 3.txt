@@ -1,0 +1,10 @@
+Modulo 3: Cicli / Loops (For & While)
+ITA: I cicli in Java sono fondamentali per scorrere liste di dati o oggetti complessi.
+ENG: Loops in Java are essential for iterating through data lists or complex objects.
+
+Codice Esempio:
+
+Java
+for (int i = 0; i < 5; i++) {
+    System.out.println("Sincronizzazione database... " + i);
+}
