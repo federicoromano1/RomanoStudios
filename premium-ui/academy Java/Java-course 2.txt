@@ -1,0 +1,13 @@
+Modulo 2: Condizioni e Logica / Conditionals
+ITA: La logica di controllo segue gli standard dei linguaggi C-style, con una tipizzazione molto forte.
+ENG: Control logic follows C-style standards, with very strong typing.
+
+Codice Esempio:
+
+Java
+int userLevel = 10;
+if (userLevel >= 10) {
+    System.out.println("Accesso Elite sbloccato");
+} else {
+    System.out.println("Accesso negato");
+}
