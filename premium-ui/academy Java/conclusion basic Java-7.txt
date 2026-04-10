@@ -1,0 +1,3 @@
+Conclusione / Conclusion
+ITA: Java è un linguaggio immenso. Impararlo significa avere la porta aperta verso lo sviluppo Android e le carriere nelle più grandi tech-company del mondo.
+ENG: Java is an immense language. Learning it means having the door open to Android development and careers in the world's largest tech companies.
