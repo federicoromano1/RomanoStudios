@@ -1,0 +1,20 @@
+JAVA basic MASTERY (ITA/ENG)
+Introduzione / Introduction
+ITA: Java è un linguaggio orientato agli oggetti, solido e sicurissimo. Gira su miliardi di dispositivi ed è il cuore di quasi tutto il software aziendale mondiale.
+ENG: Java is an object-oriented, solid, and highly secure language. It runs on billions of devices and is the heart of almost all enterprise software worldwide.
+
+Modulo 1: Variabili e Sintassi / Variables & Syntax
+ITA: In Java tutto deve stare dentro una "Classe". È un linguaggio più verboso del C++ ma molto organizzato.
+ENG: In Java, everything must be inside a "Class". It is more verbose than C++ but very organized.
+
+Codice Esempio:
+
+Java
+public class Main {
+    public static void main(String[] args) {
+        String studio = "Romano Studios";
+        int versione = 3;
+        double prezzo = 49.99;
+        System.out.println(studio + " Academy v." + versione);
+    }
+}
