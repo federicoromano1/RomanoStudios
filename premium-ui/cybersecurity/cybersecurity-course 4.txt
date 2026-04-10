@@ -1,0 +1,24 @@
+Classi e Oggetti / Classes & Objects
+ITA: Questa è la vera forza del C++. Puoi creare dei "modelli" (Classi) per rappresentare oggetti reali o digitali.
+ENG: This is the true strength of C++. You can create "blueprints" (Classes) to represent real or digital objects.
+
+Codice Esempio:
+
+C++
+class Hacker {
+public:
+    std::string nickname;
+    int rank;
+
+    void showStatus() {
+        std::cout << nickname << " | Rank: " << rank << std::endl;
+    }
+};
+
+int main() {
+    Hacker h1;
+    h1.nickname = "RomanoCoder";
+    h1.rank = 99;
+    h1.showStatus();
+    return 0;
+}
