@@ -1,0 +1,13 @@
+Modulo 4: ArrayList (Liste Dinamiche) / ArrayList
+ITA: Gli array classici hanno dimensione fissa. Con ArrayList puoi aggiungere e rimuovere elementi quando vuoi.
+ENG: Classic arrays have a fixed size. With ArrayList, you can add and remove elements whenever you want.
+
+Codice Esempio:
+
+Java
+import java.util.ArrayList;
+
+ArrayList<String> staff = new ArrayList<>();
+staff.add("Federico");
+staff.add("Admin");
+System.out.println("Membri attivi: " + staff.size());
