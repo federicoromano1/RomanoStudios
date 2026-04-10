@@ -1,0 +1,11 @@
+
+Modulo 3: Cicli / Loops (For & While)
+ITA: Ripetere operazioni su grandi quantità di dati.
+ENG: Repeating operations on large amounts of data.
+
+Codice Esempio:
+
+C++
+for (int i = 1; i <= 10; i++) {
+    std::cout << "Processo numero: " << i << std::endl;
+}
