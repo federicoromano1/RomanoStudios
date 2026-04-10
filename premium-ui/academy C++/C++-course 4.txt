@@ -1,0 +1,12 @@
+Modulo 4: Vector (Array Dinamici) / Vectors
+ITA: A differenza del C, in C++ i vector possono cambiare dimensione automaticamente. Sono molto più sicuri e flessibili degli array classici.
+ENG: Unlike C, in C++ vectors can resize automatically. They are much safer and more flexible than classic arrays.
+
+Codice Esempio:
+
+C++
+#include <vector>
+
+std::vector<std::string> database = {"Admin", "Federico", "User1"};
+database.push_back("Premium_User");
+std::cout << "Utenti totali: " << database.size() << std::endl;
