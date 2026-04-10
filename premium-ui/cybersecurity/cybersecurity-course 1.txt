@@ -1,0 +1,18 @@
+ROMANO STUDIOS: CYBERSECURITY ELITE DEFENSE (ITA/ENG)
+Introduzione / Introduction
+ITA: La Cybersecurity è l'arte di proteggere reti, sistemi e dati dagli attacchi digitali. In questo corso studieremo le vulnerabilità più comuni e gli strumenti usati dai professionisti.
+ENG: Cybersecurity is the art of protecting networks, systems, and data from digital attacks. In this course, we will study common vulnerabilities and the tools used by professionals.
+
+Modulo 1: Red Team vs Blue Team / Red vs Blue
+ITA: Il Red Team attacca per trovare falle; il Blue Team difende e risponde agli attacchi. Un esperto di cybersecurity deve conoscere entrambi i mondi.
+ENG: The Red Team attacks to find flaws; the Blue Team defends and responds to attacks. A cybersecurity expert must know both worlds.
+
+Modulo 2: Ricognizione (Footprinting) / Reconnaissance
+ITA: Prima di ogni attacco, bisogna raccogliere informazioni. Usiamo strumenti come whois o nslookup per capire chi è il bersaglio.
+ENG: Before any attack, information must be gathered. We use tools like whois or nslookup to understand who the target is.
+
+Codice Esempio:
+
+Bash
+whois target-site.com
+nslookup -type=mx target-site.com
