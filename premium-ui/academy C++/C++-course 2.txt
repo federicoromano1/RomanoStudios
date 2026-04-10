@@ -1,0 +1,13 @@
+Modulo 2: Logica e Condizioni / Logic & Conditionals
+ITA: Usiamo gli operatori logici per controllare il flusso del programma.
+ENG: We use logical operators to control the program flow.
+
+Codice Esempio:
+
+C++
+int xp = 150;
+if (xp > 100 && xp < 200) {
+    std::cout << "Livello: Advanced" << std::endl;
+} else if (xp >= 200) {
+    std::cout << "Livello: Elite" << std::endl;
+}
